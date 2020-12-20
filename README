@@ -1,48 +1,23 @@
-dwm - dynamic window manager
-============================
-dwm is an extremely fast, small, and dynamic window manager for X.
+# dwm: Dynamic Window Manager
 
+Welcome to my personal build of dwm. dwm is an incredible lightweight and fast tiling window manager for X developed by the [suckless](https://suckless.org/) community. The window manager is written in C and also requires the enduser to modify the code if changes are desired. Luckily there are a lot of patches written by dwm/suckless users for those that are less familiar with C.
 
-Requirements
-------------
-In order to build dwm you need the Xlib header files.
+## Patches
 
+- [fullgaps](https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-20200508-7b77734.diff). Enable gaps between windows.
 
-Installation
-------------
-Edit config.mk to match your local setup (dwm is installed into
-the /usr/local namespace by default).
+## Usage
 
-Afterwards enter the following command to build and install dwm (if
-necessary as root):
+```
+git clone https://github.com/sinanmohd/dwm
+```
 
-    make clean install
+```
+sudo make clean install
+```
 
+If you are using xinitrc. add the following line to your .xinitrc to start dwm using startx
 
-Running dwm
------------
-Add the following line to your .xinitrc to start dwm using startx:
-
-    exec dwm
-
-In order to connect dwm to a specific display, make sure that
-the DISPLAY environment variable is set correctly, e.g.:
-
-    DISPLAY=foo.bar:1 exec dwm
-
-(This will start dwm on display :1 of the host foo.bar.)
-
-In order to display status info in the bar, you can do something
-like this in your .xinitrc:
-
-    while xsetroot -name "`date` `uptime | sed 's/.*,//'`"
-    do
-    	sleep 1
-    done &
-    exec dwm
-
-
-Configuration
--------------
-The configuration of dwm is done by creating a custom config.h
-and (re)compiling the source code.
+```
+exec dwm
+```
