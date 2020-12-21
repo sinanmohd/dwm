@@ -6,13 +6,15 @@ Welcome to my personal build of dwm. dwm is an incredible lightweight and fast t
 
 - [fullgaps](https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-20200508-7b77734.diff). Enable gaps between windows.
 
+- [attachaside](https://dwm.suckless.org/patches/attachaside/dwm-attachaside-6.1.diff). New windows are opened on the right side.
+
 ## Usage
 
 ```
 git clone https://github.com/sinanmohd/dwm
-```
 
-```
+cd dwm
+
 sudo make clean install
 ```
 
