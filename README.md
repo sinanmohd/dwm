@@ -5,6 +5,7 @@ Welcome to my personal build of dwm. dwm is an incredible lightweight and fast t
 ## Patches
 
 - [fullgaps](https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-20200508-7b77734.diff). Enable gaps between windows.
+- [notitle](https://dwm.suckless.org/patches/notitle/dwm-notitle-6.2.diff). Removes window title
 
 ## Usage
 
