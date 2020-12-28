@@ -7,6 +7,12 @@ Welcome to my personal build of dwm. dwm is an incredible lightweight and fast t
 - [fullgaps](https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-20200508-7b77734.diff). Enable gaps between windows.
 - [notitle](https://dwm.suckless.org/patches/notitle/dwm-notitle-6.2.diff). Removes window title
 
+## Extra
+
+- [Product Sans](https://github.com/sinanmohd/dot/tree/master/font/google-sans)
+- [Slstatus](https://github.com/sinanmohd/dot/tree/master/slstatus)
+- [Material Design Icons](https://aur.archlinux.org/packages/ttf-material-design-icons-git/)
+
 ## Usage
 
 ```
