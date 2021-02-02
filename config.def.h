@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -27,9 +27,9 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class      instance    title       tags mask     iscentered   isfloating   monitor */
+	{ "Gimp",     NULL,       NULL,       0,            0,           1,           -1 },
+	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           0,           -1 },
 };
 
 /* layout(s) */
@@ -59,11 +59,13 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *scrnshot[] = { "flameshot", "gui", NULL };
 
 /* audio control */
 static const char *upvol[]   = { "amixer", "set", "Master", "1dB+",   NULL };
 static const char *downvol[] = { "amixer", "set", "Master", "1dB-",   NULL };
-static const char *mutevol[] = { "amixer", "set", "Master", "toggle", NULL };
+static const char *mutevol[] = { "pamixer", "-t", NULL };
+/* static const char *mutevol[] = { "amixer", "set", "Master", "toggle", NULL }; */
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -96,6 +98,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_F10,    spawn,          {.v = upvol   } },
 	{ MODKEY,                       XK_F9,     spawn,          {.v = downvol } },
 	{ MODKEY,                       XK_F8,     spawn,          {.v = mutevol } },
+	{ MODKEY,			XK_s,      spawn,          {.v = scrnshot } }, 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
@@ -105,7 +108,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },	
 };
 
 /* button definitions */
