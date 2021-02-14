@@ -12,8 +12,8 @@ Welcome to my personal build of dwm. dwm is an incredible lightweight and fast t
 
 ## Extra
 
-- [Product Sans](https://github.com/sinanmohd/dot/tree/master/font/google-sans)
-- [Slstatus](https://github.com/sinanmohd/dot/tree/master/slstatus)
+- [Product Sans](https://gitlab.com/sinanmohd/dots/-/tree/master/font/google-sans)
+- [Slstatus](https://gitlab.com/sinanmohd/dots/-/tree/master/slstatus)
 - [Material Design Icons](https://aur.archlinux.org/packages/ttf-material-design-icons-git/)
 
 ## Usage
