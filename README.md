@@ -1,6 +1,6 @@
 # dwm: Dynamic Window Manager
 
-![Screenshot](preview/screenshot.png)
+![Screenshot](preview/screenshot1.png)
 
 Welcome to my personal build of dwm. dwm is an incredible lightweight and fast tiling window manager for X developed by the [suckless](https://suckless.org/) community. The window manager is written in C and also requires the enduser to modify the code if changes are desired.
 
