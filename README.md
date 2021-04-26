@@ -9,6 +9,7 @@ Welcome to my personal build of dwm. dwm is an incredible lightweight and fast t
 - [fullgaps](https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-20200508-7b77734.diff). Enable gaps between windows.
 - [notitle](https://dwm.suckless.org/patches/notitle/dwm-notitle-6.2.diff). Removes window title
 - [center](https://dwm.suckless.org/patches/center/dwm-center-6.2.diff). Automatically center clients
+- [swallow](https://dwm.suckless.org/patches/swallow/dwm-swallow-20201211-61bb8b2.diff). Adds window swallowing
 
 ## Extra
 
@@ -26,7 +27,7 @@ git clone https://github.com/sinanmohd/dwm
 sudo make clean install
 ```
 
-If you are using xinitrc. add the following line to your .xinitrc to start dwm using startx
+If you are using xinitrc add the following line to your .xinitrc to start dwm using startx
 
 ```
 exec dwm
