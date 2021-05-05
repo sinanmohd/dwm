@@ -9,11 +9,11 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Product Sans:size=9" };
 static const char dmenufont[]       = "Product Sans:size=9";
-static const char col_gray1[]       = "#222222";
+static const char col_gray1[]       = "#22212f";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+static const char col_cyan[]        = "#6072a9";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -67,8 +67,11 @@ static const char *termcmd[]   = { "st", NULL };
 static const char *scrnlock[]  = { "slock", NULL };
 static const char *scrnshot[]  = { "flameshot", "gui", NULL };
 static const char *nnnfm[]     = { "st", "nnn", "-de", NULL };
-static const char *nnnhidden[] = { "st", "nnn", "-deH", NULL };
+static const char *dmsounds[]  = { "${HOME}/.config/scripts/dmsounds/dmsounds.sh", NULL };
+static const char *web[]       = { "surf", NULL };
+static const char *webalt[]    = { "librewolf", NULL };
 static const char *ytsearch[]  = { "st", "ytfzf", "-tl", NULL };
+static const char *ytsub[]     = { "st", "ytfzf", "-tl", "--subs=3", NULL };
 
 /* audio control */
 static const char *upvol[]   = { "amixer", "set", "Master", "1dB+",   NULL };
@@ -107,10 +110,13 @@ static Key keys[] = {
 	{ MODKEY,                       XK_F10,    spawn,          {.v = upvol   } },
 	{ MODKEY,                       XK_F9,     spawn,          {.v = downvol } },
 	{ MODKEY,                       XK_F8,     spawn,          {.v = mutevol } },
-	{ MODKEY,			XK_x,      spawn,          {.v = scrnlock } }, 
-	{ MODKEY,			XK_s,      spawn,          {.v = scrnshot } }, 
-	{ MODKEY,                       XK_n,      spawn,          {.v = nnnfm } },
-	{ MODKEY|ShiftMask,             XK_n,      spawn,          {.v = nnnhidden } },
+	{ MODKEY,			XK_x,      spawn,          {.v = scrnlock } },
+	{ MODKEY,			XK_s,      spawn,          {.v = scrnshot } },
+	{ MODKEY,                       XK_a,      spawn,          {.v = nnnfm } },
+	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = dmsounds } },
+	{ MODKEY,                       XK_w,      spawn,          {.v = web } },
+	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = webalt } },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = ytsub } },
 	{ MODKEY|ShiftMask,             XK_y,      spawn,          {.v = ytsearch } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
@@ -121,7 +127,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },	
+	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
 /* button definitions */
