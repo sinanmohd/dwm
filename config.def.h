@@ -13,7 +13,7 @@ static const char col_gray1[]       = "#22212f";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#6072a9";
+static const char col_cyan[]        = "#39456a";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -113,7 +113,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_x,      spawn,          {.v = scrnlock } },
 	{ MODKEY,			XK_s,      spawn,          {.v = scrnshot } },
 	{ MODKEY,                       XK_a,      spawn,          {.v = nnnfm } },
-	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = dmsounds } },
+	{ MODKEY|ShiftMask,             XK_a,      spawn,          {.v = dmsounds } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = web } },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = webalt } },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = ytsub } },
