@@ -13,7 +13,7 @@ static const char col_gray1[]       = "#22212f";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#39456a";
+static const char col_cyan[]        = "#6071a9";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -65,11 +65,12 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[]  = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]   = { "st", NULL };
 static const char *scrnlock[]  = { "slock", NULL };
-static const char *scrnshot[]  = { "flameshot", "gui", NULL };
-static const char *nnnfm[]     = { "st", "nnn", "-de", NULL };
-static const char *dmsounds[]  = { "${HOME}/.config/scripts/dmsounds/dmsounds.sh", NULL };
-static const char *web[]       = { "surf", NULL };
+static const char *scrnshot[]  = { "scst", NULL };
+static const char *nnnfm[]     = { "st", "nnn", "-dec", NULL };
+static const char *dmsounds[]  = { "dmsounds", NULL };
+static const char *web[]       = { "tabbed", "-c", "surf", "-e", NULL };
 static const char *webalt[]    = { "librewolf", NULL };
+static const char *ncmpcpp[]   = { "st", "ncmpcpp-ueberzug", NULL };
 static const char *ytsearch[]  = { "st", "ytfzf", "-tl", NULL };
 static const char *ytsub[]     = { "st", "ytfzf", "-tl", "--subs=3", NULL };
 
@@ -116,6 +117,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_a,      spawn,          {.v = dmsounds } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = web } },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = webalt } },
+	{ MODKEY,	                XK_n,      spawn,          {.v = ncmpcpp } },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = ytsub } },
 	{ MODKEY|ShiftMask,             XK_y,      spawn,          {.v = ytsearch } },
 	TAGKEYS(                        XK_1,                      0)
